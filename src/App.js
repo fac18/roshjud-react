@@ -1,26 +1,23 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+// import "./App.css";
+import UserImage from './components/UserImage'
+import { getUserDataGit } from './utils/getUserDataGit'
 
-function App() {
+export default function App() {
+  const [userData, setUserImage] = React.useState(null);
+
+  React.useEffect(() => {
+      const url = `https://api.github.com/users/roshlarosh`;
+      getUserDataGit(url).then(data => setUserImage(data));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
+      <UserImage userData={userData} />
+
+      
     </div>
   );
 }
 
-export default App;
+
