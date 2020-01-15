@@ -23,5 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 #token
-./src/token.js
+
+accessToken.js
 
