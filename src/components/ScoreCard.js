@@ -15,9 +15,9 @@ const ScoreCard = () => {
   const userTrueFalse = [];
 
   const mission = [
-    "To row to Galapagos from Madrid",
-    "To Eat 1000 super spicy hot chicken wing in 1 min",
-    "To fly to Pluto and back in 18h"
+    "to put out the Austrailian wild-fires.",
+    "to find and resuce the girls who have gone missing from the detention camps on the Mexican-US border.",
+    "to create a perpetual motion machine."
   ];
 
   // onClick={increment} aria-label="increment score"
@@ -25,9 +25,9 @@ const ScoreCard = () => {
   return (
     <div>
       <h3>Score Card</h3>
-      <p>Are they going to pass the mission?</p>
+      <p>Do you believe you will accomplish your mission in collaboration with your Super Buddy?</p>
       <p>
-        Your mission is:{mission[Math.floor(Math.random() * (3 - 1 + 1) + 0)]}
+        Your mission is {mission[Math.floor(Math.random() * (3 - 1 + 1) + 0)]}
       </p>
       <button
         value="true"
