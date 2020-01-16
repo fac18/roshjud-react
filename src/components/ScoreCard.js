@@ -58,7 +58,7 @@ const ScoreCard = () => {
         NO
       </button>
 
-      <p>You have {score}</p>
+      <p>You have correctly predicted the outcome of {score} missions!</p>
     </div>
   );
 };
