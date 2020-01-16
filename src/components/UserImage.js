@@ -1,31 +1,45 @@
-import React from 'react';
-// import { getUserDataGit } from '../utils/getUserDataGit';
+import React from "react";
+import { getUserDataGit } from "../utils/getUserDataGit";
 
-const UserImage = props => {
-    console.log('This is userData', props.userData);
+const UserImage = () => {
+  const [userData, setUserData] = React.useState(null);
+  console.log("This is userData", userData);
 
-    if (!props.userData) {
-        return <h3 className='loading'>...Loading</h3>
-    };
+  const [gitHandle, setGitHandle] = React.useState();
 
-    const { avatar_url, name} = props.userData
+  // React.useEffect(() => {}, []);
 
-    // const [userData, setUserImage] = React.useState(null);
+  return (
+    <div>
+      <h1>SuperGit</h1>
+      <form
+        onSubmit={event => {
+          event.preventDefault();
+          const url = `https://api.github.com/users/${gitHandle}`;
+          getUserDataGit(url).then(data => setUserData(data));
+        }}
+      >
+        <fieldset>
+          <legend>User</legend>
+          <label for="gitHandle"></label>
+          <input
+            placeholder="Enter user name"
+            type="text"
+            id="gitHandle"
+            name="gitHandle"
+            value={gitHandle}
+            onChange={event => setGitHandle(event.target.value)}
+          ></input>
+          <input type="submit" value="submit"></input>
+        </fieldset>
+        {userData ? <img src={userData.avatar_url} /> : null}
+      </form>
+    </div>
+  );
 
-    // React.useEffect(() => {
-    //     const url = `https://api.github.com/users/roshlarosh`;
-    //     getUserDataGit(url).then(data => setUserImage(data));
-    // }, []);
-
-    // console.log('This is userImage', userData);
-    return (
-        <div>
-            <section>
-            <img src={avatar_url} />
-            </section>
-        </div>
-        
-    )
-}
+  // if (!userData) {
+  //   return <h3 className="loading">...Loading</h3>;
+  // }
+};
 
 export default UserImage;
