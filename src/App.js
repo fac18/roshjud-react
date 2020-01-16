@@ -8,6 +8,7 @@ export default function App() {
 
   React.useEffect(() => {
     const url = `https://api.github.com/users/roshlarosh`;
+    // const url = `https://api.github.com/users/${username}?access_token=${token}`;
     getUserDataGit(url).then(data => setUserImage(data));
   }, []);
 

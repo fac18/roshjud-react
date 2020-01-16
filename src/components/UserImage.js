@@ -9,20 +9,23 @@ const UserImage = props => {
   }
 
   const { avatar_url, name } = props.userData;
-
-  // const [userData, setUserImage] = React.useState(null);
-
-  // React.useEffect(() => {
-  //     const url = `https://api.github.com/users/roshlarosh`;
-  //     getUserDataGit(url).then(data => setUserImage(data));
-  // }, []);
-
-  // console.log('This is userImage', userData);
   return (
     <div>
-      <section>
+      <h1>SuperGit</h1>
+      <form>
+        <fieldset>
+          <legend>User</legend>
+          <label for=""></label>
+          <input
+            placeholder="Enter user name"
+            type="text"
+            id=""
+            name=""
+            // onChange={props.handleMin}
+          ></input>
+        </fieldset>
         <img src={avatar_url} />
-      </section>
+      </form>
     </div>
   );
 };
