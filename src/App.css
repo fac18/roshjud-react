@@ -14,7 +14,6 @@ html {
 
 .appImg {
   display: flex;
-  border: solid black;
   justify-content: center;
 } 
 
