@@ -1,38 +1,123 @@
+html {
+  background-color: #ffd600;
+}
+
+.title {
+  text-align: center;
+  font-family: righteous;
+  letter-spacing: 2px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appImg {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+  justify-items: center;
+}
+
+.user {
+  margin-left: 10rem;
+}
+
+.hero {
+  margin-left: 5rem;
+}
+
+.userImage {
+  width: 300px;
+  height: 300px;
+}
+
+.heroImg {
+  width: 300px;
+  height: 300px;
+}
+
+.heroBtn {
+  background-color: black;
+  border: none;
   color: white;
+  padding: 13px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.scoreCard {
+  font-family: righteous;
+  letter-spacing: 2px;
+  margin-top: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.scoreBoard {
+  text-align: center;
+}
+
+.yesBtn {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 13px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.noBtn {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 13px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.formInput {
+  height: 30px;
+  background: none;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-family: Knewave, cursive;
+  color: black;
+  margin: 10px auto;
+  display: block;
+  width: 150px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.userInput {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.finalResult {
+  font-size: 20px;
+  font-weight: bold;
 }

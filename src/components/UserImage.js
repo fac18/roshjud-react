@@ -9,7 +9,6 @@ const UserImage = () => {
 
   return (
     <div className="userForm">
-      <h1 className="title">SuperGit</h1>
       <form
         className="form"
         onSubmit={event => {
@@ -18,19 +17,19 @@ const UserImage = () => {
           getUserDataGit(url).then(data => setUserData(data));
         }}
       >
-        <fieldset>
-          <legend>User</legend>
-          <label for="gitHandle"></label>
-          <input
-            placeholder="Enter user name"
-            type="text"
-            id="gitHandle"
-            name="gitHandle"
-            value={gitHandle}
-            onChange={event => setGitHandle(event.target.value)}
-          ></input>
-          <input type="submit" value="submit"></input>
-        </fieldset>
+        {/* <fieldset> */}
+        <label for="gitUser"></label>
+        <input
+          className="formInput"
+          placeholder="Enter user name"
+          type="text"
+          id="gitUser"
+          name="gitUser"
+          value={gitHandle}
+          onChange={event => setGitHandle(event.target.value)}
+        ></input>
+        <input className="userInput" type="submit" value="submit"></input>
+        {/* </fieldset> */}
         {userData ? (
           <img
             src={userData.avatar_url}

@@ -2,8 +2,12 @@ import React from "react";
 
 const ScoreCard = () => {
   const [score, setScore] = React.useState("");
-  const increment = () => setScore(totalScore => totalScore + "passed");
-  const decrement = () => setScore(totalScore => totalScore + "failed");
+  const increment = () =>
+    setScore(
+      totalScore => totalScore + "You have successfully completed the mission"
+    );
+  const decrement = () =>
+    setScore(totalScore => totalScore + "You have failed the mission");
 
   // const [result, setResult] = React.useState(null);
 
@@ -16,21 +20,23 @@ const ScoreCard = () => {
   const userTrueFalse = [];
 
   const mission = [
-    "To row to the Galapagos from Madrid",
-    "To Eat 1000 super spicy hot chicken wing in 1 min",
-    "To fly to Pluto and back in 18h"
+    "to row to the Galapagos from Madrid.",
+    "to eat 1000 super spicy hot chicken wing in 1 min.",
+    "to fly to Pluto and back in 18h."
   ];
 
   // onClick={increment} aria-label="increment score"
 
   return (
     <div>
-      <h3>Score Card</h3>
-      <p>Are they going to pass the mission?</p>
+      <h2 className="scoreCard">Score Card</h2>
       <p>
-        Your mission is:{mission[Math.floor(Math.random() * (3 - 1 + 1) + 0)]}
+        Your mission is {mission[Math.floor(Math.random() * (3 - 1 + 1) + 0)]}
       </p>
+      <p>Are you going to complete the mission?</p>
       <button
+        className="yesBtn"
+        aria-label="Yes btn"
         value="true"
         onClick={event => {
           event.preventDefault();
@@ -46,6 +52,8 @@ const ScoreCard = () => {
         YES
       </button>
       <button
+        className="noBtn"
+        aria-label="No btn"
         value="false"
         onClick={event => {
           event.preventDefault();
@@ -61,7 +69,7 @@ const ScoreCard = () => {
         NO
       </button>
 
-      <p>You have {score}</p>
+      <p className="finalResult">{score}</p>
     </div>
   );
 };

@@ -18,11 +18,7 @@ const HeroImage = () => {
         Get Super Buddy
       </button>
       {heroData ? (
-        <img
-          src={heroData.images.md}
-          alt={"superheroes"}
-          className="superHeroImg"
-        />
+        <img src={heroData.images.md} alt={"superheroes"} className="heroImg" />
       ) : null}
     </div>
   );
