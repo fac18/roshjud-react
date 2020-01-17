@@ -6,7 +6,7 @@
 
 # gitMission Impossible?
 
-- To play our game click on this link ![](https://roshjud-react.netlify.com/)
+- We deployed our app on netlify. To play our game, please click on this [link](https://roshjud-react.netlify.com/)
 
 ![](https://media0.giphy.com/media/TwHb0h15HoZkA/giphy.gif?cid=790b7611c5b4ea3e00a524836e9ca2281caf1588557fd069&rid=giphy.gif)
 
