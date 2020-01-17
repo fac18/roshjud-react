@@ -7,12 +7,11 @@ const UserImage = () => {
 
   const [gitHandle, setGitHandle] = React.useState();
 
-  // React.useEffect(() => {}, []);
-
   return (
-    <div>
-      <h1>SuperGit</h1>
+    <div className="userForm">
+      <h1 className="title">SuperGit</h1>
       <form
+        className="form"
         onSubmit={event => {
           event.preventDefault();
           const url = `https://api.github.com/users/${gitHandle}`;
@@ -32,14 +31,16 @@ const UserImage = () => {
           ></input>
           <input type="submit" value="submit"></input>
         </fieldset>
-        {userData ? <img src={userData.avatar_url} /> : null}
+        {userData ? (
+          <img
+            src={userData.avatar_url}
+            alt={"Github user"}
+            className="userImage"
+          />
+        ) : null}
       </form>
     </div>
   );
-
-  // if (!userData) {
-  //   return <h3 className="loading">...Loading</h3>;
-  // }
 };
 
 export default UserImage;

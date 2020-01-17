@@ -1,8 +1,9 @@
 import React from "react";
 
 const ScoreCard = () => {
-  const [score, setScore] = React.useState(0);
-  const increment = () => setScore(totalScore => totalScore + 1);
+  const [score, setScore] = React.useState("");
+  const increment = () => setScore(totalScore => totalScore + "passed");
+  const decrement = () => setScore(totalScore => totalScore + "failed");
 
   // const [result, setResult] = React.useState(null);
 
@@ -15,7 +16,7 @@ const ScoreCard = () => {
   const userTrueFalse = [];
 
   const mission = [
-    "To row to Galapagos from Madrid",
+    "To row to the Galapagos from Madrid",
     "To Eat 1000 super spicy hot chicken wing in 1 min",
     "To fly to Pluto and back in 18h"
   ];
@@ -37,6 +38,8 @@ const ScoreCard = () => {
           console.log(userTrueFalse);
           if (randomNumber === 1) {
             increment();
+          } else {
+            decrement();
           }
         }}
       >
@@ -49,10 +52,10 @@ const ScoreCard = () => {
           userTrueFalse.push(2);
           console.log(userTrueFalse);
           if (randomNumber === 2) {
-            increment();
+            decrement();
+          } else {
+            decrement();
           }
-
-          // userTrueFalse[0] === randomTrueFalse() ? increment : null;
         }}
       >
         NO

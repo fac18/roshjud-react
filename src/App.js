@@ -1,5 +1,5 @@
 import React from "react";
-// import "./App.css";
+import "./App.css";
 import UserImage from "./components/UserImage";
 import HeroImage from "./components/HeroImage";
 import ScoreCard from "./components/ScoreCard";
