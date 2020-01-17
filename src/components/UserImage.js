@@ -7,8 +7,6 @@ const UserImage = () => {
 
   const [gitHandle, setGitHandle] = React.useState();
 
-  // React.useEffect(() => {}, []);
-
   return (
     <div>
       <h1>gitMission Impossible?</h1>
@@ -36,10 +34,6 @@ const UserImage = () => {
       </form>
     </div>
   );
-
-  // if (!userData) {
-  //   return <h3 className="loading">...Loading</h3>;
-  // }
 };
 
 export default UserImage;
