@@ -4,8 +4,6 @@ const ScoreCard = () => {
   const [score, setScore] = React.useState(0);
   const increment = () => setScore(totalScore => totalScore + 1);
 
-  // const [result, setResult] = React.useState(null);
-
   const randomTrueFalse = () => {
     return Math.floor(Math.random() * (3 - 1 + 1) + 1);
   };
@@ -20,9 +18,7 @@ const ScoreCard = () => {
     "to create a perpetual motion machine."
   ];
 
-  // onClick={increment} aria-label="increment score"
-
-  return (
+   return (
     <div>
       <h3>Mission</h3>
       <p>
@@ -53,7 +49,6 @@ const ScoreCard = () => {
             increment();
           }
 
-          // userTrueFalse[0] === randomTrueFalse() ? increment : null;
         }}
       >
         NO
