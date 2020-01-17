@@ -10,8 +10,7 @@ const UserImage = () => {
   return (
     <div className="userForm">
       <div>
-        {/* <h1>gitMission Impossible?</h1> */}
-        <form
+       <form
           className="form"
           onSubmit={event => {
             event.preventDefault();
@@ -37,21 +36,7 @@ const UserImage = () => {
               className="userImage"
             />
           ) : null}
-          {/* <fieldset>
-            <legend>Your git id</legend>
-            <label for="gitHandle"></label>
-            <input
-              placeholder="Enter your git handle"
-              type="text"
-              id="gitHandle"
-              name="gitHandle"
-              value={gitHandle}
-              onChange={event => setGitHandle(event.target.value)}
-            ></input>
-            <input type="submit" value="submit"></input>
-          </fieldset> */}
-          {/* {userData ? <img src={userData.avatar_url} /> : null} */}
-        </form>
+          </form>
       </div>
     </div>
   );

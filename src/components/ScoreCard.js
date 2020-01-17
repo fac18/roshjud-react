@@ -6,9 +6,7 @@ const ScoreCard = () => {
     setScore(
       totalScore => totalScore + 1
     );
-  // const decrement = () =>
-  //   setScore(totalScore => totalScore + "You have correctly predicted the outcome of your mission");
-
+  
   const randomTrueFalse = () => {
     return Math.floor(Math.random() * (3 - 1 + 1) + 1);
   };
@@ -45,9 +43,6 @@ const ScoreCard = () => {
           if (randomNumber === 1) {
             increment();
           } 
-          // else {
-          //   decrement();
-          // }
         }}
       >
         YES
@@ -63,15 +58,10 @@ const ScoreCard = () => {
           if (randomNumber === 2) {
             increment();
           } 
-          // else {
-          //   decrement();
-          // }
         }}
       >
         NO
       </button>
-
-      {/* <p className="finalResult">{score}</p> */}
       <p className="finalResult">You have correctly predicted the outcome of {score} missions!</p>
     </div>
   );
