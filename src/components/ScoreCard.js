@@ -9,8 +9,6 @@ const ScoreCard = () => {
   const decrement = () =>
     setScore(totalScore => totalScore + "You have failed the mission");
 
-  // const [result, setResult] = React.useState(null);
-
   const randomTrueFalse = () => {
     return Math.floor(Math.random() * (3 - 1 + 1) + 1);
   };
@@ -20,20 +18,22 @@ const ScoreCard = () => {
   const userTrueFalse = [];
 
   const mission = [
-    "to row to the Galapagos from Madrid.",
-    "to eat 1000 super spicy hot chicken wing in 1 min.",
-    "to fly to Pluto and back in 18h."
+    "to put out the Austrailian wild-fires.",
+    "to find and resuce the girls who have gone missing from the detention camps on the Mexican-US border.",
+    "to create a perpetual motion machine."
   ];
-
-  // onClick={increment} aria-label="increment score"
 
   return (
     <div>
-      <h2 className="scoreCard">Score Card</h2>
+      <h3>Mission</h3>
       <p>
         Your mission is {mission[Math.floor(Math.random() * (3 - 1 + 1) + 0)]}
       </p>
-      <p>Are you going to complete the mission?</p>
+      <h3>Score Card</h3>
+      <p>
+        Do you believe you will accomplish your mission in collaboration with
+        your Super Buddy?
+      </p>
       <button
         className="yesBtn"
         aria-label="Yes btn"
@@ -70,6 +70,7 @@ const ScoreCard = () => {
       </button>
 
       <p className="finalResult">{score}</p>
+      <p>You have correctly predicted the outcome of {score} missions!</p>
     </div>
   );
 };

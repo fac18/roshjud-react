@@ -15,7 +15,7 @@ const HeroImage = () => {
           getHeroData(url).then(data => setHeroData(data));
         }}
       >
-        Get Super Buddy
+        Reveal Super Buddy
       </button>
       {heroData ? (
         <img src={heroData.images.md} alt={"superheroes"} className="heroImg" />
