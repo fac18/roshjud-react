@@ -1,14 +1,12 @@
 import React from "react";
 
 const ScoreCard = () => {
-  const [score, setScore] = React.useState("");
+  const [score, setScore] = React.useState(0);
   const increment = () =>
     setScore(
-      totalScore => totalScore + "You have successfully completed the mission"
+      totalScore => totalScore + 1
     );
-  const decrement = () =>
-    setScore(totalScore => totalScore + "You have failed the mission");
-
+  
   const randomTrueFalse = () => {
     return Math.floor(Math.random() * (3 - 1 + 1) + 1);
   };
@@ -44,9 +42,7 @@ const ScoreCard = () => {
           console.log(userTrueFalse);
           if (randomNumber === 1) {
             increment();
-          } else {
-            decrement();
-          }
+          } 
         }}
       >
         YES
@@ -60,17 +56,13 @@ const ScoreCard = () => {
           userTrueFalse.push(2);
           console.log(userTrueFalse);
           if (randomNumber === 2) {
-            decrement();
-          } else {
-            decrement();
-          }
+            increment();
+          } 
         }}
       >
         NO
       </button>
-
-      <p className="finalResult">{score}</p>
-      <p>You have correctly predicted the outcome of {score} missions!</p>
+      <p className="finalResult">You have correctly predicted the outcome of {score} missions!</p>
     </div>
   );
 };
