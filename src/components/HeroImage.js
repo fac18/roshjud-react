@@ -6,8 +6,9 @@ const HeroImage = () => {
   console.log("This is heroData", heroData);
 
   return (
-    <div>
+    <div className="superhero">
       <button
+        className="heroBtn"
         onClick={event => {
           const id = Math.floor(Math.random() * (732 - 1 + 1) + 1);
           const url = `https://akabab.github.io/superhero-api/api/id/${id}.json`;
@@ -16,7 +17,9 @@ const HeroImage = () => {
       >
         Reveal Super Buddy
       </button>
-      {heroData ? <img src={heroData.images.md} /> : null}
+      {heroData ? (
+        <img src={heroData.images.md} alt={"superheroes"} className="heroImg" />
+      ) : null}
     </div>
   );
 };
