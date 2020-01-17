@@ -24,11 +24,12 @@ const ScoreCard = () => {
 
   return (
     <div>
-      <h3>Score Card</h3>
-      <p>Do you believe you will accomplish your mission in collaboration with your Super Buddy?</p>
+      <h3>Mission</h3>
       <p>
         Your mission is {mission[Math.floor(Math.random() * (3 - 1 + 1) + 0)]}
       </p>
+      <h3>Score Card</h3>
+      <p>Do you believe you will accomplish your mission in collaboration with your Super Buddy?</p>
       <button
         value="true"
         onClick={event => {
