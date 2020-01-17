@@ -21,6 +21,24 @@ const ScoreCard = () => {
     "to create a perpetual motion machine."
   ];
 
+  const handleNoClick = (event) => {
+    event.preventDefault();
+    userTrueFalse.push(2);
+    console.log(userTrueFalse);
+    if (randomNumber === 2) {
+      increment();
+    }
+  };
+
+  const handleYesClick = (event) => {
+    event.preventDefault();
+    userTrueFalse.push(1);
+    console.log(userTrueFalse);
+    if (randomNumber === 1) {
+      increment();
+    }
+  };
+
   return (
     <div>
       <h3>Mission</h3>
@@ -36,14 +54,7 @@ const ScoreCard = () => {
         className="yesBtn"
         aria-label="Yes btn"
         value="true"
-        onClick={event => {
-          event.preventDefault();
-          userTrueFalse.push(1);
-          console.log(userTrueFalse);
-          if (randomNumber === 1) {
-            increment();
-          } 
-        }}
+        onClick={handleYesClick}
       >
         YES
       </button>
@@ -51,14 +62,7 @@ const ScoreCard = () => {
         className="noBtn"
         aria-label="No btn"
         value="false"
-        onClick={event => {
-          event.preventDefault();
-          userTrueFalse.push(2);
-          console.log(userTrueFalse);
-          if (randomNumber === 2) {
-            increment();
-          } 
-        }}
+        onClick={handleNoClick}
       >
         NO
       </button>
