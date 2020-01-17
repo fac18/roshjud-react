@@ -11,7 +11,7 @@ const UserImage = () => {
 
   return (
     <div>
-      <h1>SuperGit</h1>
+      <h1>gitMission Impossible?</h1>
       <form
         onSubmit={event => {
           event.preventDefault();
@@ -20,10 +20,10 @@ const UserImage = () => {
         }}
       >
         <fieldset>
-          <legend>User</legend>
+          <legend>Your git id</legend>
           <label for="gitHandle"></label>
           <input
-            placeholder="Enter user name"
+            placeholder="Enter your git handle"
             type="text"
             id="gitHandle"
             name="gitHandle"
