@@ -2,11 +2,8 @@ import React from "react";
 
 const ScoreCard = () => {
   const [score, setScore] = React.useState(0);
-  const increment = () =>
-    setScore(
-      totalScore => totalScore + 1
-    );
-  
+  const increment = () => setScore(totalScore => totalScore + 1);
+
   const randomTrueFalse = () => {
     return Math.floor(Math.random() * (3 - 1 + 1) + 1);
   };
@@ -21,7 +18,7 @@ const ScoreCard = () => {
     "to create a perpetual motion machine."
   ];
 
-  const handleNoClick = (event) => {
+  const handleNoClick = event => {
     event.preventDefault();
     userTrueFalse.push(2);
     console.log(userTrueFalse);
@@ -30,7 +27,7 @@ const ScoreCard = () => {
     }
   };
 
-  const handleYesClick = (event) => {
+  const handleYesClick = event => {
     event.preventDefault();
     userTrueFalse.push(1);
     console.log(userTrueFalse);
@@ -42,9 +39,7 @@ const ScoreCard = () => {
   return (
     <div>
       <h3>Mission</h3>
-      <p>
-        Your mission is {mission[Math.floor(Math.random() * (3 - 1 + 1) + 0)]}
-      </p>
+      <p>Your mission is {mission[Math.floor(Math.random() * (3 - 1 + 1))]}</p>
       <h3>Score Card</h3>
       <p>
         Do you believe you will accomplish your mission in collaboration with
@@ -66,7 +61,9 @@ const ScoreCard = () => {
       >
         NO
       </button>
-      <p className="finalResult">You have correctly predicted the outcome of {score} missions!</p>
+      <p className="finalResult">
+        You have correctly predicted the outcome of {score} missions!
+      </p>
     </div>
   );
 };
